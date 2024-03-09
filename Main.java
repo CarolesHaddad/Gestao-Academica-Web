@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Carol");
 
         Disciplina disciplina1 = new Disciplina("Matematica", 60);
         Disciplina disciplina2 = new Disciplina("matematica2", 60);
