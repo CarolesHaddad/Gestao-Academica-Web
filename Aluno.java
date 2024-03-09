@@ -1,4 +1,3 @@
 public class Aluno {
-    private int id;
-  
+  private int matricula;
 }
