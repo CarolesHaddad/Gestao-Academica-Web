@@ -41,8 +41,4 @@ public class Disciplina {
     public void listarAlunos(Aluno aluno) {
 
     }
-    @Override
-    public String toString() {
-        return "Disciplina: " + nome + ", Carga Horária: " + cargaHoraria;
-    }
 }

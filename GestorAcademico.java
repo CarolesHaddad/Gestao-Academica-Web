@@ -1,8 +1,8 @@
 public class GestorAcademico extends Pessoa {
+    private String setor;
 
-
-    public GestorAcademico(int id, String nome, int idade) {
-        super(id, nome, idade);
+    public GestorAcademico(int id, String nome, int idade,String email,String telefone) {
+        super(id, nome, idade,email,telefone);
     }
 
     public void adicionarProfessor() {
@@ -20,4 +20,6 @@ public class GestorAcademico extends Pessoa {
     public void excluirAluno() {
 
     }
+
+
 }
