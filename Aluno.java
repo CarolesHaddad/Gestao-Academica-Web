@@ -8,6 +8,8 @@ public class Aluno extends Pessoa {
     private double media;
     private double cr;
 
+    private List<Boletim> boletim;
+
     public Aluno(int id, String nome, int idade, String matricula,String email,String telefone) {
         super(id, nome, idade,email,telefone);
         this.notas = new ArrayList<>();
@@ -61,22 +63,20 @@ public class Aluno extends Pessoa {
 
     }
 
-    public void calcularMediaAlunoDisciplina(Aluno aluno) {
-
+    public void calcularMediaAlunoDisciplina(Aluno aluno,Nota nota)
+    {
+        this.media = (nota.getNotap1() + nota.getNotap2())/2;
+        System.out.println("A média do aluno na disciplina: " + nota.getDisciplina().getNome() + " é: "+ this.media);
 
     }
 
-    public void calcularCr()
+
+    public void verificarRecuperacaoAluno(Aluno aluno)
     {
 
     }
-    public void verificarRecuperacaoAluno(Aluno aluno) {
 
-    }
-
-    public void listarDisciplinas(
-
-    )
+    public void listarDisciplinas()
     {
 
         System.out.println("O aluno(a) " + this.getNome() + " está matriculado nas disciplinas: ");

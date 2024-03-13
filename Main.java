@@ -28,6 +28,7 @@ public class Main {
         aluno2.fazerMatriculaDisciplina(disciplina1);
         aluno3.fazerMatriculaDisciplina(disciplina1);
         disciplina1.listarAlunos();
+        aluno1.calcularMediaAlunoDisciplina(aluno1,nota1);
 
     }
 }
