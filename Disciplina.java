@@ -38,7 +38,13 @@ public class Disciplina {
         this.alunos = alunos;
     }
 
-    public void listarAlunos(Aluno aluno) {
+    public void listarAlunos() {
+        System.out.println("Lista de alunos da disciplina: " + this.nome);
+        for(Aluno aluno : alunos) {
+            System.out.println("- " + aluno.getNome());
 
+        }
     }
+
+
 }

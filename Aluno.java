@@ -56,19 +56,27 @@ public class Aluno extends Pessoa {
     }
 
     public void fazerMatriculaDisciplina(Disciplina disciplinas) {
-        this.disciplinas.add(disciplinas);
+        this.disciplinas.add(disciplinas); // adiciona this.disciplinas é a lista de disciplinas do aluno, este método está adicionando uma disciplina passada por parâmetro para a lista de disciplinas do alunos.
+        disciplinas.getAlunos().add(this); // o this autoreferencia o objeto, ele pega disciplinas que é um objeto de Disciplina e está adicionando um objeto aluno na lista de alunos em Disciplina.
 
     }
 
-    public void calcularMediaAluno(Aluno aluno) {
+    public void calcularMediaAlunoDisciplina(Aluno aluno) {
+
 
     }
 
+    public void calcularCr()
+    {
+
+    }
     public void verificarRecuperacaoAluno(Aluno aluno) {
 
     }
 
-    public void listarDisciplinas()
+    public void listarDisciplinas(
+
+    )
     {
 
         System.out.println("O aluno(a) " + this.getNome() + " está matriculado nas disciplinas: ");
@@ -77,10 +85,20 @@ public class Aluno extends Pessoa {
             System.out.println("- " + disciplina.getNome());
         }
     }
-
     public void exibirDetalhes()
     {
-        System.out.println("Nome: " + this.nome + "\n Idade: " + this.idade + "\n ID: " + this.id + "Matrícula: " + this.matricula);
+        System.out.println("Nome: " + this.nome + "\n Idade: " + this.idade + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone + "\nMatrícula: " + this.matricula);
+    }
+
+    public void listarNotas(Aluno aluno)
+    {
+        System.out.println("Bem vindo " + aluno.getNome() + ",suas notas são: ");
+        for(Nota nota: notas)
+        {
+            System.out.println("Disciplina: " + nota.getDisciplina().getNome());
+            System.out.println("-Suas notas na disciplina: " + nota.getNotap1() + " e " + nota.getNotap2());
+            System.out.println("----------------------------------------------------------------------");
+        }
     }
 }
 

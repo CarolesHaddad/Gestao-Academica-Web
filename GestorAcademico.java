@@ -21,5 +21,8 @@ public class GestorAcademico extends Pessoa {
 
     }
 
-
+    public void exibirDetalhes()
+    {
+        System.out.println("Nome: " + this.nome + "\n Idade: " + this.idade + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone + "\nSetor: " + this.setor);
+    }
 }
