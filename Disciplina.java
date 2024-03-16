@@ -42,7 +42,6 @@ public class Disciplina {
         System.out.println("Lista de alunos da disciplina: " + this.nome);
         for(Aluno aluno : alunos) {
             System.out.println("- " + aluno.getNome());
-
         }
     }
 

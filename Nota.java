@@ -34,4 +34,9 @@ public class Nota {
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
     }
+
+    public double calcularMediaAlunoDisciplina()
+    {
+        return ((this.notap1) + (this.notap2)) / 2;
+    }
 }

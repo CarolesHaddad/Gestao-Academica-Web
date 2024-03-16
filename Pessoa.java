@@ -1,16 +1,16 @@
 abstract class Pessoa {
     protected int id;
     protected String nome;
-    protected  int idade;
+    protected String dataNascimento;
 
     protected String email;
 
     protected String telefone;
 
-    public Pessoa(int id, String nome, int idade,String email,String telefone) {
+    public Pessoa(int id, String nome, String dataNascimento,String email,String telefone) {
         this.id = id;
         this.nome = nome;
-        this.idade = idade;
+        this.dataNascimento = dataNascimento;
         this.email = email;
         this.telefone = telefone;
     }
@@ -23,12 +23,12 @@ abstract class Pessoa {
         this.id = id;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getDataNascimento() {
+        return this.dataNascimento;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getNome() {
@@ -41,6 +41,6 @@ abstract class Pessoa {
 
     public void exibirDetalhes()
     {
-        System.out.println("Nome: " + this.nome + "\n Idade: " + this.idade + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone);
+        System.out.println("Nome: " + this.nome + "\n Idade: " + this.dataNascimento + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone);
     }
 }

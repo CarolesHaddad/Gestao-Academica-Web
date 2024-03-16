@@ -7,8 +7,8 @@ public class GestorAcademico extends Pessoa {
     private List<Aluno> alunos;
 
 
-    public GestorAcademico(int id, String nome, int idade,String email,String telefone) {
-        super(id, nome, idade,email,telefone);
+    public GestorAcademico(int id, String nome, String dataNascimento,String email,String telefone) {
+        super(id, nome,dataNascimento,email,telefone);
         this.professores = new ArrayList<>();
         this.alunos = new ArrayList<>();
     }
@@ -36,12 +36,12 @@ public class GestorAcademico extends Pessoa {
     }
     public void listarprofessores(){
         for(Professor professor : professores){
-            System.out.println("Nome: " + professor.getNome());
+            System.out.println("Nome: " + professor.getNome() + " Disciplina Lecionada: " + professor.getDisciplinasLecionadas().getNome());
         }
     }
 
     public void exibirDetalhes()
     {
-        System.out.println("Nome: " + this.nome + "\n Idade: " + this.idade + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone + "\nSetor: " + this.setor);
+        System.out.println("Nome: " + this.nome + "\n Idade: " + this.dataNascimento + "\n ID: " + this.id + "\nemail: " + this.email + "\nTelefone: " + this.telefone + "\nSetor: " + this.setor);
     }
 }
