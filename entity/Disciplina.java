@@ -1,17 +1,26 @@
+package entity;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disciplina {
 
+public class Disciplina  {
+    private int id;
     private String nome;
     private int cargaHoraria;
 
     private List<Aluno> alunos;
 
-    public Disciplina(String nome, int cargaHoraria) {
+    public Disciplina(int id, String nome, int cargaHoraria) {
+        this.id = id;
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
         this.alunos = new ArrayList<>();
+    }public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
@@ -38,7 +47,11 @@ public class Disciplina {
         this.alunos = alunos;
     }
 
-    public void listarAlunos(Aluno aluno) {
-
+    public void listarAlunos() {
+        System.out.println("Lista de alunos da disciplina: " + this.nome);
+        for(Aluno aluno : alunos) {
+            System.out.println("- " + aluno.getNome());
+        }
     }
+    
 }

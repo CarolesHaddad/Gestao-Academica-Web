@@ -1,7 +1,10 @@
-public class Nota {
+package entity;
 
+public class Nota {
+    private int id;
     private double notap1;
     private double notap2;
+    Aluno aluno;
 
     private Disciplina disciplina;
 
@@ -9,6 +12,12 @@ public class Nota {
         this.notap1 = notap1;
         this.notap2 = notap2;
         this.disciplina = disciplina;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
     }
 
     public double getNotap1() {
@@ -34,4 +43,10 @@ public class Nota {
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
     }
+
+    public double calcularMediaAlunoDisciplina()
+    {
+        return ((this.notap1) + (this.notap2)) / 2;
+    }
+    
 }
